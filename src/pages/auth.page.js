@@ -34,6 +34,23 @@ class AuthPage {
 
     await this.submitButton.click();
   }
+
+  async logIn({ email, password }) {
+    await this.emailField.setValue(email);
+    await this.passwordField.setValue(password);
+
+    await this.submitButton.click();
+  }
+
+  async InvalidDatalogIn({ email, password }) {
+    await this.emailField.setValue(email);
+    await this.passwordField.setValue(password);
+
+
+    await this.submitButton.click();
+  }
+
+
 }
 
 module.exports = { AuthPage };
